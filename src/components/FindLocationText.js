@@ -138,7 +138,7 @@ export default function FindLocationText() {
     const slicesCount = initialValues.length;
 
     const ChuViLon = 500 / 2;
-    const ChuViNho = 55;
+    const ChuViNho = 70;
     const ChuViVuong = 180;
 
     const DoXoayCoBan = 360 / slicesCount;
