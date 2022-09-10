@@ -8,7 +8,14 @@ export default function FindLocationText() {
             rotation: 0,
             chance: 0.25,
             values: "A",
-            id: "1"
+            id: "1",
+            id_img: "img_1",
+            url:"https://phuclong.com.vn/uploads/dish/f70a14ee207180-60000694banhtrachaylavacaphe.png",
+            x_i: 0,
+            y_i: 0,
+            width_i: 0,
+            height_i: 0,
+            rotation_i: 0
         },
 
         {
@@ -18,7 +25,14 @@ export default function FindLocationText() {
             rotation: 0,
             chance: 0.25,
             values: "",
-            id: "2"
+            id: "2",
+            id_img: "img_2",
+            url:"https://phuclong.com.vn/uploads/dish/f70a14ee207180-60000694banhtrachaylavacaphe.png",
+            x_i: 0,
+            y_i: 0,
+            width_i: 0,
+            height_i: 0,
+            rotation_i: 0
         },
         {
             option: "3 Không gầy",
@@ -27,7 +41,14 @@ export default function FindLocationText() {
             rotation: 0,
             chance: 0,
             values: "ADFG",
-            id: "3"
+            id: "3",
+            id_img: "img_3",
+            url:"https://phuclong.com.vn/uploads/dish/f70a14ee207180-60000694banhtrachaylavacaphe.png",
+            x_i: 0,
+            y_i: 0,
+            width_i: 0,
+            height_i: 0,
+            rotation_i: 0
         },
         {
             option: "4 Không gầy",
@@ -36,7 +57,14 @@ export default function FindLocationText() {
             rotation: 0,
             chance: 0,
             values: "",
-            id: "4"
+            id: "4",
+            id_img: "img_4",
+            url:"https://phuclong.com.vn/uploads/dish/f70a14ee207180-60000694banhtrachaylavacaphe.png",
+            x_i: 0,
+            y_i: 0,
+            width_i: 0,
+            height_i: 0,
+            rotation_i: 0
         },
 
         {
@@ -46,7 +74,14 @@ export default function FindLocationText() {
             rotation: 0,
             chance: 0,
             values: "",
-            id: "5"
+            id: "5",
+            id_img: "img_5",
+            url:"https://phuclong.com.vn/uploads/dish/f70a14ee207180-60000694banhtrachaylavacaphe.png",
+            x_i: 0,
+            y_i: 0,
+            width_i: 0,
+            height_i: 0,
+            rotation_i: 0
         },
 
         {
@@ -56,7 +91,14 @@ export default function FindLocationText() {
             rotation: 0,
             chance: 0,
             values: "",
-            id: "6"
+            id: "6",
+            id_img: "img_6",
+            url:"https://phuclong.com.vn/uploads/dish/f70a14ee207180-60000694banhtrachaylavacaphe.png",
+            x_i: 0,
+            y_i: 0,
+            width_i: 0,
+            height_i: 0,
+            rotation_i: 0
         },
 
         {
@@ -66,7 +108,14 @@ export default function FindLocationText() {
             rotation: 0,
             chance: 0,
             values: "",
-            id: "7"
+            id: "7",
+            id_img: "img_7",
+            url:"https://phuclong.com.vn/uploads/dish/f70a14ee207180-60000694banhtrachaylavacaphe.png",
+            x_i: 0,
+            y_i: 0,
+            width_i: 0,
+            height_i: 0,
+            rotation_i: 0
         },
         {
             option: "8 Không gầy",
@@ -75,14 +124,22 @@ export default function FindLocationText() {
             rotation: 0,
             chance: 0,
             values: "",
-            id: "8"
+            id: "8",
+            id_img: "img_8",
+            url:"https://phuclong.com.vn/uploads/dish/f70a14ee207180-60000694banhtrachaylavacaphe.png",
+            x_i: 0,
+            y_i: 0,
+            width_i: 0,
+            height_i: 0,
+            rotation_i: 0
         }
     ];
 
     const slicesCount = initialValues.length;
 
     const ChuViLon = 500 / 2;
-    const ChuViNho = 75;
+    const ChuViNho = 55;
+    const ChuViVuong = 180;
 
     const DoXoayCoBan = 360 / slicesCount;
 
@@ -90,21 +147,27 @@ export default function FindLocationText() {
 
     function start_values() {
         for (let i = 0; i < initialValues.length; i++) {
-            initialValues[i].x = getPositionX(i);
-            initialValues[i].y = getPositionY(i);
+            initialValues[i].x = getPositionX(i,ChuViNho);
+            initialValues[i].y = getPositionY(i,ChuViNho);
             initialValues[i].rotation = getRotation(i);
+
+            initialValues[i].x_i = getPositionX(i,ChuViVuong);
+            initialValues[i].y_i = getPositionY(i,ChuViVuong);
+            initialValues[i].rotation_i = getRotation(i);
+            initialValues[i].width_i = 50;
+            initialValues[i].height_i = 50;
         }
     }
 
     const src_url = "https://quayso.vn/img/AnhVongQuay/Mau1/Mau1_" + (slicesCount) + ".png";
 
-    const getPositionX = (index) => {
-        let ToaDo = ChuViLon + ChuViNho * Math.cos((getRotation2(index)));
+    const getPositionX = (index, ChuVi) => {
+        let ToaDo = ChuViLon + ChuVi * Math.cos((getRotation2(index)));
         return ToaDo;
     };
 
-    const getPositionY = (index) => {
-        let ToaDo = ChuViLon + ChuViNho * Math.sin((getRotation2(index)));
+    const getPositionY = (index, ChuVi) => {
+        let ToaDo = ChuViLon + ChuVi * Math.sin((getRotation2(index)));
         return ToaDo;
     };
 
