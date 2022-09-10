@@ -159,8 +159,6 @@ export default function FindLocationText() {
         }
     }
 
-    const src_url = "https://quayso.vn/img/AnhVongQuay/Mau1/Mau1_" + (slicesCount) + ".png";
-
     const getPositionX = (index, ChuVi) => {
         let ToaDo = ChuViLon + ChuVi * Math.cos((getRotation2(index)));
         return ToaDo;

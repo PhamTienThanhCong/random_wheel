@@ -3,12 +3,6 @@ import { Transformer, Image } from "react-konva";
 import React from 'react';
 import useImage from "use-image";
 
-const URLImageIcon = ({ x, y, rotation, width, height, src }) => {
-  const [image] = useImage(src);
-  return <Image x={x} y={y} image={image} width={width} height={height} rotation={rotation} />;
-};
-
-
 export default function Rectangle({ shapeProps, isSelected, onSelect, onChange }){
     const shapeRef = React.useRef();
     const trRef = React.useRef();
