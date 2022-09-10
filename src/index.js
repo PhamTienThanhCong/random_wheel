@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
-import App from "./App";
+import RotationLuck from "./RotationLuck";
 
 const data = [
   {
@@ -70,7 +70,7 @@ const root = createRoot(rootElement);
 
 root.render(
   <StrictMode>
-    <App 
+    <RotationLuck 
       data= {data}
       width= {width}
       height= {height}

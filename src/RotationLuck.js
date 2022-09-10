@@ -236,7 +236,7 @@ const RectangleImg = ({ shapeProps, isSelected, onSelect, onChange }) => {
   );
 };
 
-export default function App({ data, width, height, type }) {
+export default function RotationLuck({ data, width, height, type }) {
 
   const initialValues = FindLocationText(data, width, height , 1);
   const initial2Values = FindLocationText(data, width, height , 2);
