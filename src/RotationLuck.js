@@ -39,8 +39,8 @@ const FindLocationText = (data, width, height, type) => {
 
   const max_width = width / 2;
   const max_height = height / 2;
-  const ChuViNho = width / 9;
-  const ChuViVuong = ChuViNho * 3;
+  const ChuViNho = width / 8;
+  const ChuViVuong = ChuViNho * 2.5;
 
   const DoXoayCoBan = 360 / slicesCount;
 
@@ -50,6 +50,7 @@ const FindLocationText = (data, width, height, type) => {
     for (let i = 0; i < initialValues.length; i++) {
       initialValues[i].x = getPositionX(i, ChuViNho, 1);
       initialValues[i].y = getPositionY(i, ChuViNho, 1);
+      initialValues[i].rotation = getRotation(i);
       if (type === 1){
         initialValues[i].option = initialValues[i].option_1;
         initialValues[i].x = getPositionX(i, ChuViNho, 1);
@@ -58,8 +59,8 @@ const FindLocationText = (data, width, height, type) => {
         initialValues[i].option = initialValues[i].option_2;
         initialValues[i].x = getPositionX(i, ChuViNho, 2);
         initialValues[i].y = getPositionY(i, ChuViNho, 2);
+        initialValues[i].rotation += 4;
       }
-      initialValues[i].rotation = getRotation(i);
 
       initialValues[i].x_i = getPositionX(i, ChuViVuong, 0);
       initialValues[i].y_i = getPositionY(i, ChuViVuong, 0);
@@ -93,11 +94,11 @@ const FindLocationText = (data, width, height, type) => {
     }
     if (initialValues[index].option_1.length > 0 && initialValues[index].option_2.length > 0) {
       if (type === 1) {
-        XuLy += initialValues[index].size_text / 2;
+        XuLy += initialValues[index].size_text / 2 ;
       } else if (type === 0) {
         XuLy += 0;
       } else {
-        XuLy -= initialValues[index].size_text / 2;
+        XuLy -= initialValues[index].size_text / 2 - 3;
       }
     }
     return (Xoay - XuLy) * Math.PI / 180;
