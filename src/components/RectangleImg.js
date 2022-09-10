@@ -3,7 +3,7 @@ import { Transformer, Image } from "react-konva";
 import React from 'react';
 import useImage from "use-image";
 
-export default function Rectangle({ shapeProps, isSelected, onSelect, onChange }){
+export default function RectangleImg({ shapeProps, isSelected, onSelect, onChange }){
     const shapeRef = React.useRef();
     const trRef = React.useRef();
 

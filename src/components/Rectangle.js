@@ -25,7 +25,7 @@ export default function Rectangle({ shapeProps, isSelected, onSelect, onChange }
           x={shapeProps.x}
           y={shapeProps.y}
           rotation={shapeProps.rotation}
-          fontSize={20}
+          fontSize={shapeProps.size_text}
           draggable
           onDragEnd={(e) => {
             onChange({
