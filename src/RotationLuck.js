@@ -2,10 +2,6 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { Stage, Layer, Image, Text, Transformer } from 'react-konva';
 import useImage from "use-image";
-// import  Rectangle  from "./components/Rectangle";
-// import  RectangleImg  from "./components/RectangleImg";
-// import FindLocationText from "./components/FindLocationText";
-// import BackGroundImage from "./components/BackGroundImage";
 
 import "./styles.css";
 
@@ -59,7 +55,7 @@ const FindLocationText = (data, width, height, type) => {
         initialValues[i].option = initialValues[i].option_2;
         initialValues[i].x = getPositionX(i, ChuViNho, 2);
         initialValues[i].y = getPositionY(i, ChuViNho, 2);
-        initialValues[i].rotation += 4;
+        initialValues[i].rotation += 0;
       }
 
       initialValues[i].x_i = getPositionX(i, ChuViVuong, 0);
@@ -94,11 +90,11 @@ const FindLocationText = (data, width, height, type) => {
     }
     if (initialValues[index].option_1.length > 0 && initialValues[index].option_2.length > 0) {
       if (type === 1) {
-        XuLy += initialValues[index].size_text / 2 ;
+        XuLy += initialValues[index].size_text / 2 + 1;
       } else if (type === 0) {
         XuLy += 0;
       } else {
-        XuLy -= initialValues[index].size_text / 2 - 3;
+        XuLy -= initialValues[index].size_text / 2 - 4;
       }
     }
     return (Xoay - XuLy) * Math.PI / 180;

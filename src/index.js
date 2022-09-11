@@ -19,6 +19,13 @@ const data = [
     size_text: 15
   },
   {
+    text1: "===============",
+    text2: "===============",
+    img: "https://phuclong.com.vn/uploads/dish/f70a14ee207180-60000694banhtrachaylavacaphe.png",
+    size_img: 50,
+    size_text: 15
+  },
+  {
     text1: "Không giòn",
     text2: "",
     img: "https://phuclong.com.vn/uploads/dish/f70a14ee207180-60000694banhtrachaylavacaphe.png",
@@ -26,8 +33,8 @@ const data = [
     size_text: 16
   },
   {
-    text1: "Không giòn",
-    text2: "chưa chắc",
+    text1: "===============",
+    text2: "===============",
     img: "https://phuclong.com.vn/uploads/dish/f70a14ee207180-60000694banhtrachaylavacaphe.png",
     size_img: 50,
     size_text: 20
@@ -52,6 +59,27 @@ const data = [
     img: "https://phuclong.com.vn/uploads/dish/f70a14ee207180-60000694banhtrachaylavacaphe.png",
     size_img: 50,
     size_text: 17
+  },
+  {
+    text1: "===============",
+    text2: "===============",
+    img: "https://phuclong.com.vn/uploads/dish/f70a14ee207180-60000694banhtrachaylavacaphe.png",
+    size_img: 50,
+    size_text: 15
+  },
+  {
+    text1: "===============",
+    text2: "===============",
+    img: "https://phuclong.com.vn/uploads/dish/f70a14ee207180-60000694banhtrachaylavacaphe.png",
+    size_img: 50,
+    size_text: 15
+  },
+  {
+    text1: "===============",
+    text2: "===============",
+    img: "https://phuclong.com.vn/uploads/dish/f70a14ee207180-60000694banhtrachaylavacaphe.png",
+    size_img: 50,
+    size_text: 15
   },
   {
     text1: "Không giòn",
