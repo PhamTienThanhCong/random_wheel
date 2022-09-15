@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/random_wheel/static/css/main.fc5c2c69.css",
+    "main.js": "/random_wheel/static/js/main.6f26e94b.js",
+    "index.html": "/random_wheel/index.html",
+    "main.fc5c2c69.css.map": "/random_wheel/static/css/main.fc5c2c69.css.map",
+    "main.6f26e94b.js.map": "/random_wheel/static/js/main.6f26e94b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fc5c2c69.css",
+    "static/js/main.6f26e94b.js"
+  ]
+}
